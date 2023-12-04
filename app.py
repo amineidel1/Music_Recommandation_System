@@ -55,7 +55,7 @@ def main():
     top_n = get_top_n(predictions, n=5)
 
     # Sélection de l'utilisateur
-    selected_user = st.selectbox("Select a Song:", list(top_n.keys()))
+    selected_user = st.selectbox("Select User:", list(top_n.keys()))
 
     if st.button('Get Recommendations'):
         user_ratings = top_n[selected_user]
