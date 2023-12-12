@@ -58,7 +58,7 @@ def main():
     With this feature, you not only receive personalized recommendations but also gain insight into how they were chosen, making your experience more transparent and trustworthy.
     This process is explqined here , where the 'User-item Interaction Matrix' shows your ratings for various items, like movies or books. Just as a chef uses ingredients to create a recipe, our system uses this matrix to distill your unique tastes and preferences. It then approximates this matrix by factoring it into two smaller matrices—'User Matrix' and 'Item Matrix'. These matrices highlight the underlying factors that connect your preferences to item attributes. When multiplied together, they reconstruct the original matrix, filling in the gaps with predicted ratings, suggesting new items you're likely to enjoy. This mathematical innovation powers the recommendations you see, providing transparent and personalized suggestions tailored just for you.
     """)
-    st.image('Test.png', width=300)
+    st.image('Graph\Test.png', width=300)
     df = load_data()
     song_id_to_title = pd.Series(df.title.values, index=df.song).to_dict()
 
