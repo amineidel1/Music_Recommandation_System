@@ -42,15 +42,19 @@ def main():
     # Adding the explanatory section
     st.markdown("""
     ## About the App
-    This app is a music recommendation engine with the objective to recommend music to each user in our database. It is built using an AI model, specifically the Singular Value Decomposition (SVD) algorithm from Scikit Surprise.
+    To enhance your experience with our recommendation platform, we've incorporated a feature that not only suggests items you'll love but also explains why they're a good fit for you. Here's how it adds value to your experience:
 
-    In our recommendation system, achieving an RMSE (Root Mean Square Error) of 2.21 is a promising result, particularly given the complexity and variability inherent in user preferences. On a 1 to 10 rating scale, this RMSE indicates that our model’s predictions are reasonably close to the actual ratings, with an average error margin within an acceptable range for many practical applications.
+    This process is visualized in our user-friendly interface, where the 'User-item Interaction Matrix' shows your ratings for various items, like movies or books. Just as a chef uses ingredients to create a recipe, our system uses this matrix to distill your unique tastes and preferences. It then approximates this matrix by factoring it into two smaller matrices—'User Matrix' and 'Item Matrix'. These matrices highlight the underlying factors that connect your preferences to item attributes. When multiplied together, they reconstruct the original matrix, filling in the gaps with predicted ratings, suggesting new items you're likely to enjoy. This mathematical innovation powers the recommendations you see, providing transparent and personalized suggestions tailored just for you.
 
-    This value reflects the robustness of our SVD approach in capturing the underlying patterns within the user-item interaction data. It underscores the model’s ability to effectively discern and predict user preferences, even amidst diverse and sparse data.
 
-    Furthermore, an RMSE of 2.21 lays a solid foundation for our system, offering a balance between accuracy and computational efficiency. It suggests that users are likely to receive recommendations that are relevant and reflective of their tastes, crucial for a positive user experience.
+    The 'Why' Behind Recommendations: Our system uses a sophisticated algorithm called Singular Value Decomposition (SVD), which considers your past interactions to find patterns and similarities with other users and items. When it suggests something, it also provides a reason, such as 'Users like you enjoyed this item,' or 'This is similar to other items you've rated highly.'
 
-    As we continue to refine our system, we aim to further enhance the precision of our recommendations.
+
+    Our code is crafted with efficiency and maintainability in mind. We use the latest best practices to ensure that explanations are generated quickly and accurately reflect the recommendation logic.
+
+    We chose this method over others because it strikes the right balance between transparency and complexity. It gives you enough insight to trust and understand the recommendations without overwhelming you with technical details.
+
+    With this feature, you not only receive personalized recommendations but also gain insight into how they were chosen, making your experience more transparent and trustworthy.
     """)
     df = load_data()
     song_id_to_title = pd.Series(df.title.values, index=df.song).to_dict()
