@@ -39,6 +39,19 @@ def load_model():
 # Interface Streamlit
 def main():
     st.title('Music Recommendation App')
+    # Adding the explanatory section
+    st.markdown("""
+    ## About the App
+    This app is a music recommendation engine with the objective to recommend music to each user in our database. It is built using an AI model, specifically the Singular Value Decomposition (SVD) algorithm from Scikit Surprise.
+
+    In our recommendation system, achieving an RMSE (Root Mean Square Error) of 2.21 is a promising result, particularly given the complexity and variability inherent in user preferences. On a 1 to 10 rating scale, this RMSE indicates that our model’s predictions are reasonably close to the actual ratings, with an average error margin within an acceptable range for many practical applications.
+
+    This value reflects the robustness of our SVD approach in capturing the underlying patterns within the user-item interaction data. It underscores the model’s ability to effectively discern and predict user preferences, even amidst diverse and sparse data.
+
+    Furthermore, an RMSE of 2.21 lays a solid foundation for our system, offering a balance between accuracy and computational efficiency. It suggests that users are likely to receive recommendations that are relevant and reflective of their tastes, crucial for a positive user experience.
+
+    As we continue to refine our system, we aim to further enhance the precision of our recommendations.
+    """)
     df = load_data()
     song_id_to_title = pd.Series(df.title.values, index=df.song).to_dict()
 
