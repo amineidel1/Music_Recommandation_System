@@ -48,8 +48,8 @@ def main():
 
     This process is explained here, where the 'User-item Interaction Matrix' shows your ratings for various items(songs). Just as a chef uses ingredients to create a recipe, our system uses this matrix to distill your unique tastes and preferences. It then approximates this matrix by factoring it into two smaller matrices—'User Matrix' and 'Item Matrix'. These matrices highlight the underlying factors that connect your preferences to item attributes. When multiplied together, they reconstruct the original matrix, filling in the gaps with predicted ratings, suggesting new items you're likely to enjoy. This mathematical innovation powers the recommendations you see, providing transparent and personalized suggestions tailored just for you.""")
     st.image('Test.png', width=800)
-    st.markdown("""The 'Why' Behind Recommendations: Our system uses a sophisticated algorithm called Singular Value Decomposition (SVD), which considers your past interactions to find patterns and similarities with other users and items. When it suggests something, it also provides a reason, such as 'Users like you enjoyed this item,' or 'This is similar to other items you've rated highly.'
-
+    st.markdown("""
+    The 'Why' Behind Recommendations: Our system uses a sophisticated algorithm called Singular Value Decomposition (SVD), which considers your past interactions to find patterns and similarities with other users and items. When it suggests something, it also provides a reason, such as 'Users like you enjoyed this item,' or 'This is similar to other items you've rated highly.'
     Our code is crafted with efficiency and maintainability in mind. We use the latest best practices to ensure that explanations are generated quickly and accurately reflect the recommendation logic.
 
     We chose this method over others because it strikes the right balance between transparency and complexity. It gives you enough insight to trust and understand the recommendations without overwhelming you with technical details. 
