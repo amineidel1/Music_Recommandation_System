@@ -46,9 +46,9 @@ def main():
 
     To enhance your experience with our recommendation platform, we've incorporated a feature that not only suggests items you'll love but also explains why they're a good fit for you. Here's how it adds value to your experience: 
 
-    This process is explained here, where the 'User-item Interaction Matrix' shows your ratings for various items(songs). Just as a chef uses ingredients to create a recipe, our system uses this matrix to distill your unique tastes and preferences. It then approximates this matrix by factoring it into two smaller matrices—'User Matrix' and 'Item Matrix'. These matrices highlight the underlying factors that connect your preferences to item attributes. When multiplied together, they reconstruct the original matrix, filling in the gaps with predicted ratings, suggesting new items you're likely to enjoy. This mathematical innovation powers the recommendations you see, providing transparent and personalized suggestions tailored just for you.
-
-    The 'Why' Behind Recommendations: Our system uses a sophisticated algorithm called Singular Value Decomposition (SVD), which considers your past interactions to find patterns and similarities with other users and items. When it suggests something, it also provides a reason, such as 'Users like you enjoyed this item,' or 'This is similar to other items you've rated highly.'
+    This process is explained here, where the 'User-item Interaction Matrix' shows your ratings for various items(songs). Just as a chef uses ingredients to create a recipe, our system uses this matrix to distill your unique tastes and preferences. It then approximates this matrix by factoring it into two smaller matrices—'User Matrix' and 'Item Matrix'. These matrices highlight the underlying factors that connect your preferences to item attributes. When multiplied together, they reconstruct the original matrix, filling in the gaps with predicted ratings, suggesting new items you're likely to enjoy. This mathematical innovation powers the recommendations you see, providing transparent and personalized suggestions tailored just for you.""")
+    st.image('Test.png', width=800)
+    st.markdown("""The 'Why' Behind Recommendations: Our system uses a sophisticated algorithm called Singular Value Decomposition (SVD), which considers your past interactions to find patterns and similarities with other users and items. When it suggests something, it also provides a reason, such as 'Users like you enjoyed this item,' or 'This is similar to other items you've rated highly.'
 
     Our code is crafted with efficiency and maintainability in mind. We use the latest best practices to ensure that explanations are generated quickly and accurately reflect the recommendation logic.
 
@@ -56,7 +56,7 @@ def main():
 
     Our recommendation engine is like a digital mind-reader, scoring an impressive 2.21 out of 10 in predicting what you'll enjoy next. This means it's good at guessing what you like, with just a tiny margin of error. It's all thanks to a clever math trick called SVD that helps us see patterns in what you and others enjoy. So, sit back and let us find you your next favorite song- our system's pretty sharp at picking songs match your taste! 😄
     """)
-    st.image('Test.png', width=800)
+    
     # Title or explanation for your video
     # Display the title or explanation
     st.markdown("""
